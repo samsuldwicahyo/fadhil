@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek GIS Desa Pangebatan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            padding-top: 56px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Light Mode Styles */
+        body.light-mode {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        body.light-mode .navbar {
+            background-color: #ffffff;
+            color: #29465b;
+        }
+        body.light-mode .navbar .nav-link {
+            color: #29465b;
+        }
+        body.light-mode .btn-dark-mode {
+            background-color: #ffffff;
+            color: #29465b;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #29465b;
+            color: #ffffff;
+        }
+        body.dark-mode .navbar {
+            background-color: #1f3547;
+            color: #ffffff;
+        }
+        body.dark-mode .navbar .nav-link {
+            color: #ffffff;
+        }
+        body.dark-mode .btn-dark-mode {
+            background-color: #ffffff;
+            color: #1f3547;
+        }
+
+        .btn-dark-mode {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    </style>
+</head>
+<body class="light-mode">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#"><i class="fas fa-map"></i> GIS Desa Pangebatan</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home"><i class="fas fa-home"></i> Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#peta"><i class="fas fa-map-marker-alt"></i> Peta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#fasilitas"><i class="fas fa-building"></i> Fasilitas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tentang"><i class="fas fa-info-circle"></i> Tentang Desa</a>
+                </li>
+            </ul>
+            <!-- Toggle Dark/Light Mode -->
+            <button id="darkModeToggle" class="btn btn-dark-mode ms-3">
+                <i class="fas fa-moon"></i> Dark Mode
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero-section" id="home">
+    <div class="container text-center">
+        <h1 class="display-6"><i class="fas fa-globe"></i> Selamat Datang di Desa Pangebatan</h1>
+        <img src="https://1.bp.blogspot.com/-vVkxVMI-sBM/Xx53z4uNl3I/AAAAAAAAAB4/kWINQIbgn8spWxwpe-dDejOYdLiYXA1JgCLcBGAsYHQ/w1200-h630-p-k-no-nu/lapanhan_200727_33.jpg" alt="Desa Pangebatan" class="img-fluid rounded my-3">
+        <p class="lead">Desa Pangebatan adalah salah satu desa di Kecamatan Karanglewas, Kabupaten Banyumas, yang memiliki potensi ekonomi dan sosial yang berkembang pesat.</p>
+        <p><strong>Nama:</strong> Fadhli Roikhan Saputra | <strong>NIM:</strong> 22SA21A179</p>
+    </div>
+</div>
+
+<!-- Peta Section -->
+<div class="content-section" id="peta">
+    <div class="container">
+        <h2 class="text-center"><i class="fas fa-map"></i> Peta Desa Pangebatan</h2>
+        <p class="text-center">Tampilan peta geografis desa yang mencakup informasi wilayah serta fasilitas publik di Pangebatan.</p>
+        <div class="ratio ratio-16x9">
+            <iframe src="peta.html" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- Fasilitas Section -->
+<div class="content-section" id="fasilitas">
+    <div class="container">
+        <h2><i class="fas fa-tools"></i> Fasilitas Umum</h2>
+        <ul>
+            <li><i class="fas fa-school"></i> Sekolah Dasar Negeri Pangebatan</li>
+            <li><i class="fas fa-hospital"></i> Puskesmas Pembantu Pangebatan</li>
+            <li><i class="fas fa-mosque"></i> Masjid Jami' Al-Falah</li>
+            <li><i class="fas fa-store"></i> Pasar Desa Pangebatan</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Tentang Desa Section -->
+<div class="content-section" id="tentang">
+    <div class="container" style="text-align: justify;">
+        <h2><i class="fas fa-info-circle"></i> Tentang Desa Pangebatan</h2>
+        <p><strong>Sejarah Singkat:</strong> Desa Pangebatan telah berdiri sejak zaman penjajahan Belanda dan merupakan salah satu desa bersejarah di Kecamatan Karanglewas, Kabupaten Banyumas. Nama "Pangebatan" berasal dari kata "Gebat," yang berarti cepat dan tangkas, menggambarkan semangat warganya.</p>
+        
+        <p><strong>Letak Geografis:</strong> Desa Pangebatan terletak di Kecamatan Karanglewas, Kabupaten Banyumas, Jawa Tengah. Desa ini dikelilingi oleh area persawahan subur dan dekat dengan beberapa desa lain seperti Desa Kalisari dan Desa Karangkemiri. Iklimnya yang sejuk mendukung keberagaman hasil pertanian.</p>
+
+        <p><strong>Visi dan Misi Desa:</strong> Pemerintah Desa Pangebatan memiliki visi untuk membangun desa yang mandiri, maju, dan sejahtera. Misi utamanya adalah meningkatkan potensi lokal, pengelolaan lingkungan yang berkelanjutan, dan meningkatkan pendidikan masyarakat.</p>
+        
+        <p><strong>Potensi Lokal:</strong> Desa ini terkenal dengan hasil pertanian seperti padi, cabai, dan bawang merah. Kerajinan lokal meliputi anyaman bambu dan produksi keripik tempe. Pariwisata berbasis alam seperti wisata sawah dan spot selfie juga mulai dikembangkan.</p>
+
+        <p><strong>Fasilitas Publik:</strong> Beberapa fasilitas publik mencakup kantor desa, balai desa, puskesmas pembantu, masjid, mushola, serta lapangan olahraga untuk mendukung kegiatan pemuda.</p>
+
+        <p><strong>Budaya dan Tradisi:</strong> Tradisi sedekah bumi, acara tahunan seperti "Ruwatan Desa," dan budaya gotong royong tetap dilestarikan sebagai wujud identitas sosial dan spiritual desa.</p>
+
+        <p><strong>Pembangunan dan Infrastruktur:</strong> Dalam beberapa tahun terakhir, Desa Pangebatan telah membangun jalan desa, fasilitas olahraga, serta sistem irigasi untuk meningkatkan kesejahteraan warganya.</p>
+        
+    </div>
+</div>
+
+<!-- JavaScript Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+<!-- Dark/Light Mode Toggle Script -->
+<script>
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    darkModeToggle.addEventListener('click', () => {
+        const isDarkMode = body.classList.contains('dark-mode');
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+        darkModeToggle.innerHTML = isDarkMode
+            ? '<i class="fas fa-moon"></i> Dark Mode'
+            : '<i class="fas fa-sun"></i> Light Mode';
+    });
+</script>
+
+</body>
+</html>
